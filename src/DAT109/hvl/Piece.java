@@ -15,4 +15,5 @@ public class Piece {
         lastRoll = Dice.d6();
         value = value + lastRoll;
     }
+    //ny
 }
