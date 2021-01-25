@@ -2,6 +2,9 @@ package DAT109.hvl;
 
 public class Board {
 
+    /**
+     * brettets 100 felter representert som int verdier
+     */
     public int[] places;
 
     public Board(){
@@ -11,6 +14,11 @@ public class Board {
         }
     }
 
+    /**
+     * sjekker hvor spiller lander og om det er noe spesielt med dette feltet
+     * @param spiller det er denne spilleren sin tur
+     * @return string som forteller spilleren hva som skjedde denne runden
+     */
     public String sjekkFelt(Piece spiller){
         String s;
         String slange = "Slange! " + spiller.name + " faller tilbake til felt ";

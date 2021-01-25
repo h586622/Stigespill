@@ -17,9 +17,10 @@ public class Stigespilltester {
     // tester terningen 100 ganger for å sjekke at man ikke kommer utenfor rekkevidden til terningen
     @Test
     public void testTerning(){
+        Dice terning = new Dice();
         int i= 0;
         while(i < 100) {
-            int tall = Dice.d6();
+            int tall = terning.d6();
             assertTrue(tall > 0);
             assertTrue(tall < 7);
             i++;
@@ -33,9 +34,9 @@ public class Stigespilltester {
         Piece testPiece = new Piece("test");
         testPiece.value=15;
         String t = brett.sjekkFelt(testPiece);
-        assertEquals("Du står på felt 15",t);
+        assertEquals("test flyttet 0 plasser frem til felt: 15",t);
         testPiece.value = 100;
         t = brett.sjekkFelt(testPiece);
-        assertEquals("Du har vunnet",t);
+        assertEquals("test har vunnet",t);
     }
 }
