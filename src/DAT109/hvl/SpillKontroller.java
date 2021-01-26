@@ -12,5 +12,6 @@ public class SpillKontroller {
         Game spill = new Game(antall);
 
         spill.start();
+
     }
 }

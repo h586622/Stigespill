@@ -8,6 +8,11 @@ public class Game {
     private Piece[] spillere;
     private boolean noenHarVunnet;
 
+    /**
+     *
+     * @param antall antall spillere
+     *               oppretter nytt spill
+     */
     public Game(int antall){
         brett = new Board();
         spillere = new Piece[antall];
@@ -17,6 +22,9 @@ public class Game {
         noenHarVunnet=false;
     }
 
+    /**
+     * starter og kjører spillet
+     */
     public void start(){
         while(!noenHarVunnet) {
 

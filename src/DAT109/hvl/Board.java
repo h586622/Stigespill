@@ -43,6 +43,11 @@ public class Board {
             case 92 : s = slange + 73; spiller.value = 73; break;
             case 98 : s = slange + 78; spiller.value = 78; break;
             case 100 : s = spiller.name + " har vunnet"; break;
+            case 101 : s = spiller.name + " kom for langt og flytter derfor tilbake til forrige posisjon"; spiller.value-= spiller.roll;
+            case 102 : s = spiller.name + " kom for langt og flytter derfor tilbake til forrige posisjon"; spiller.value-= spiller.roll;
+            case 103 : s = spiller.name + " kom for langt og flytter derfor tilbake til forrige posisjon"; spiller.value-= spiller.roll;
+            case 104 : s = spiller.name + " kom for langt og flytter derfor tilbake til forrige posisjon"; spiller.value-= spiller.roll;
+            case 105 : s = spiller.name + " kom for langt og flytter derfor tilbake til forrige posisjon"; spiller.value-= spiller.roll;
             default : s = spiller.name + " flyttet " + spiller.roll + " plasser frem til felt: " + spiller.value;
         }
         return s;
