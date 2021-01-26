@@ -38,7 +38,12 @@ public class Game {
             if(p.roll == 6){
                 p.turn();
                 System.out.println(brett.sjekkFelt(p));
+                if(p.roll == 6){
+                    p.turn();
+                    System.out.println(brett.sjekkFelt(p));
+                }
             }
+
             if (p.value == 100){
                 noenHarVunnet = true;}
         }
