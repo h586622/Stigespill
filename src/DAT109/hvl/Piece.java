@@ -47,7 +47,7 @@ public class Piece {
      * representerer spillerens tur og starter metoden som kaster terning
      */
     public void turn(){
-        System.out.println("Det er "+ name + " sin tur");
+        System.out.println("Det er "+ name + " sin tur \n");
         rollDice();
         //sjekkFelt(value);
     }

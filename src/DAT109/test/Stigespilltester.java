@@ -27,6 +27,9 @@ public class Stigespilltester {
         }
     }
 
+    /**
+     * sjekker at vi får ventet resultat når vi sjekker verdi mot brettet
+     */
 
     @Test
     public void testSwitchen(){
@@ -38,5 +41,25 @@ public class Stigespilltester {
         testPiece.value = 100;
         t = brett.sjekkFelt(testPiece);
         assertEquals("test har vunnet",t);
+    }
+
+    /**
+     * sjekker at vi får lagret de tre siste kast som trengs i tilfelle der 3 seksere flytter brikken tilbake til start
+     */
+    @Test
+    public void testAtKastLagres(){
+
+        Piece testPiece = new Piece("test");
+        testPiece.rollDice();
+        int en = testPiece.roll;
+        testPiece.rollDice();
+        int to = testPiece.roll;
+        testPiece.rollDice();
+        int tre = testPiece.roll;
+        assertEquals(en, testPiece.secondLastRoll);
+        assertEquals(to, testPiece.lastRoll);
+        assertEquals(tre, testPiece.roll);
+
+
     }
 }
